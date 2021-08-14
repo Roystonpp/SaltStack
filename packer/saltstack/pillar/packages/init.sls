@@ -1,5 +1,5 @@
-package_name:
-  {% if grains['os] == 'Ubuntu' %}
+package:
+  {%i if grains['os] == 'Ubuntu' %}
     git: git
     vim: vim
     wget: wget
