@@ -25,7 +25,7 @@ jobs:
     runs-on: hashicorp/packer:1.7.3
     steps:
       - name: packer validate
-      - uses: actions/checkout@v2
-      - run:
+        uses: actions/checkout@v2
+        run:
           shell: bash
           working-directory: packer
