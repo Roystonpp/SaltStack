@@ -20,10 +20,9 @@ jobs:
 # validate ubuntu and Debian in parallel if possible
 
   validate:
-  description: Ensure all syntax is correct
-  runs-on: hashicorp/packer:1.6.4
+    runs-on: hashicorp/packer:1.6.4
 
-  steps:
+    steps:
       - name: packer validate
         uses: actions/checkout@v2
         run:
