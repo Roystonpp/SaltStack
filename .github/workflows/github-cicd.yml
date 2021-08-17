@@ -20,7 +20,6 @@ jobs:
 # validate ubuntu and Debian in parallel if possible
 
   validate:
-  name: Validation Job
   description: Ensure all syntax is correct
   runs-on: hashicorp/packer:1.6.4
 
