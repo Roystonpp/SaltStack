@@ -25,6 +25,6 @@ jobs:
     steps:
       - name: packer validate
         uses: actions/checkout@v2
-        run:
-          shell: bash
-          working-directory: packer
+        working-directory: ./packer
+        run: |
+          packer validate -var-file=*.json
