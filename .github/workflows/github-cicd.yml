@@ -22,7 +22,8 @@ jobs:
   validate:
   name: Validation Job
   description: Ensure all syntax is correct
-    runs-on: hashicorp/packer:1.7.3
+    runs-on: hashicorp/packer:1.6.4
+
     steps:
       - name: packer validate
         uses: actions/checkout@v2
