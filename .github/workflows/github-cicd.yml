@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: saltstack packer CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches:
+      - 'jinja-loops'
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+# validate ubuntu and Debian in parallel if possible
+
+  validate:
+  name: Validation Job
+  description: Ensure all syntax is correct
+    runs-on: hashicorp/packer:1.7.3
+    steps:
+      - name: packer validate
+      - uses: actions/checkout@v2
+      - run:
+          shell: bash
+          working-directory: packer
