@@ -20,7 +20,7 @@ jobs:
 # validate ubuntu and Debian in parallel if possible
 
   validate:
-    runs-on: hashicorp/packer:1.6.4
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
