@@ -29,4 +29,4 @@ jobs:
       - name: Validate
         working-directory: ./packer
         run: |
-          packer validate -var-file=packer.json
+          packer validate *.json
